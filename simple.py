@@ -1,3 +1,4 @@
+import threading
 # dict = {
 #     "a":"b",
 #     "b":6
@@ -12,3 +13,8 @@
 new_string = "Hello world"
 print(new_string.isalnum())
 print(new_string.split())
+
+print(__name__)
+
+mylist = list("abcedfghijklmnopqrstuvwxyz")
+print(mylist)
