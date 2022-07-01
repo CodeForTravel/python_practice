@@ -11,9 +11,14 @@ t2 = (4,5,6)
 # print(t1)
 t1 = t1 + t2
 print(t1)
+print(t1[:3])
+print(t1[3:])
+print(t1[::])
+print(t1[::-1])
 
 
 # wring syntax
 # t1.remove(8)
 # t1.add(8)
 # t1[0] = 29
+
