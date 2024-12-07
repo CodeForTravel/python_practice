@@ -1,12 +1,15 @@
 import time
 import threading
 import concurrent.futures
+
 execution_start_time = time.perf_counter()
+
 
 def my_function(seconds):
     print(f"Sleep for {seconds} second(s)")
     time.sleep(seconds)
     return f"Done sleeping...{seconds}"
+
 
 # print(my_function(5))
 # print(my_function(3))
@@ -30,7 +33,7 @@ def my_function(seconds):
 #     thread.join()
 
 with concurrent.futures.ThreadPoolExecutor() as executor:
-    seconds = [2,4,1,6,3]
+    seconds = [2, 4, 1, 6, 3]
     results = executor.map(my_function, seconds)
 
     for result in results:
@@ -38,4 +41,4 @@ with concurrent.futures.ThreadPoolExecutor() as executor:
 
 
 execution_end_time = time.perf_counter()
-print(f'Finished in {round(execution_end_time-execution_start_time, 2)} second(s)')
+print(f"Finished in {round(execution_end_time-execution_start_time, 2)} second(s)")
